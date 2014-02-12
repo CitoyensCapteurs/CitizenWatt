@@ -1,0 +1,7 @@
+Bibliographie : 
+
+List of Energy monitoring tools : devices, software and home automation
+http://mapawatt.com/2009/10/07/list-of-energy-monitoring-tools/
+
+Open source monitoring
+https://sites.google.com/site/ema1powermeter/open-source-energy-monitoring
