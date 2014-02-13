@@ -17,4 +17,12 @@ For Citizenwatt people, and other energy data (envoyé par Samule Huron)
 * http://ailab.eecs.wsu.edu/casas/datasets.html
 * https://bigml.com/gallery/datasets/index/energy_oil_and_gas?order_by=newest
 * 
-*
+Visu
+* http://www.r-project.org/
+* http://blog.smartbear.com/apis/tools-to-help-you-write-apps-that-use-sensors/
+* http://www.bigdata-startups.com/open-source-tools/graph/
+* http://graphviz.org/
+* http://www.elisa-dbi.co.uk/blog/38-tools-for-beautiful-data-visualisations/
+* https://plot.ly
+* http://gephi.org/features/
+* 
