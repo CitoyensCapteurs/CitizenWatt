@@ -26,3 +26,6 @@ Visu
 * https://plot.ly
 * http://gephi.org/features/
 * 
+* Le datastore de Peter Hanappe
+* https://github.com/hanappe/opensensordata.net
+* 
