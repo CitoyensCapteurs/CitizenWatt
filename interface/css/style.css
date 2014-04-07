@@ -1,0 +1,122 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #231f20;
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.yellow {
+    color: #ffd35d;
+}
+
+.orange {
+    color: #ffb43f;
+}
+
+.red {
+    color: #ff7b33;
+}
+
+#page {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    background-color: #363032;
+    color: #ffd35d;
+    padding: 0.5em;
+    border-bottom: 3px solid #52484b;
+}
+
+header a:link, header a:visited, header a:hover, header a:active {
+    color: #d6d6d6; 
+    text-decoration: none;
+}
+
+header h1 {
+    margin: 0;
+    font-variant: small-caps;
+}
+
+header h1 img {
+    max-height: 1.2em;
+    vertical-align: top;
+}
+
+#menu {
+    float: right;
+    color: #d6d6d6; 
+    font-size: 1.2em;
+}
+
+#menu a:link, #menu a:visited, #menu a:hover, #menu a:active {
+    text-decoration: underline;
+}
+
+#menu ul {
+    margin: 0;
+    line-height: 2em;
+    margin-right: 0.5em;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li:not(:first-child):before {
+    content: " | ";
+}
+
+main {
+    width: 75%;
+    margin: auto;
+    padding-bottom: 2em;
+    color: #b3abab; 
+}
+
+#overview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+#overview div {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+}
+
+#now p:first-child, #today p:first-child, #week p:first-child {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+#graph {
+    background-color: #363032;
+    border-bottom: 3px solid #52484b;
+}
+
+footer {
+    background-color: #363032;
+    color: #d6d6d6; 
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: 3px solid #52484b;
+}
+
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+    color: #ffd35d;
+}
+
+footer p {
+    margin-right: 1em;
+}
