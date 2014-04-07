@@ -25,6 +25,11 @@ body {
    text-shadow: 0 0 0.5em;
 }
 
+.left {
+    float: left;
+    margin-left: 1em;
+}
+
 #page {
     position: relative;
     min-height: 100%;
