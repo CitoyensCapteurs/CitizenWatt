@@ -31,6 +31,10 @@ body {
 }
 
 .no-day {
+    background-color: transparent !important;
+}
+
+.empty-day {
     background-color: #363032 !important;
 }
 
