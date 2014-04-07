@@ -1,0 +1,17 @@
+
+body {
+	background: #231f20;
+	color: white;
+}
+
+#holder {
+	width: 640px;
+	height: 480px;
+	left: 50%;
+	top: 50%;
+
+	margin: -240px 0 0 -320px;
+	position: absolute;
+}
+
+
