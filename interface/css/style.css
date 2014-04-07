@@ -41,6 +41,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 header h1 {
     margin: 0;
     font-variant: small-caps;
+    display: inline-block;
 }
 
 header h1 img {
