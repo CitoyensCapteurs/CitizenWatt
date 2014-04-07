@@ -21,6 +21,10 @@ body {
     color: #ff7b33;
 }
 
+.blurry {
+   text-shadow: 0 0 0.5em;
+}
+
 #page {
     position: relative;
     min-height: 100%;
