@@ -21,6 +21,35 @@ body {
     color: #ff7b33;
 }
 
+.blurry {
+   text-shadow: 0 0 0.5em;
+}
+
+.left {
+    float: left;
+    margin-left: 1em;
+}
+
+.no-day {
+    background-color: transparent !important;
+}
+
+.empty-day {
+    background-color: #363032 !important;
+}
+
+.red-day {
+    background-color: #ff7b33 !important;
+}
+
+.orange-day {
+    background-color: #ffb43f !important;
+}
+
+.yellow-day {
+    background-color: #ffd35d !important;
+}
+
 #page {
     position: relative;
     min-height: 100%;
@@ -76,7 +105,7 @@ header h1 img {
 main {
     width: 75%;
     margin: auto;
-    padding-bottom: 2em;
+    padding-bottom: 4em;
     color: #b3abab; 
 }
 
@@ -101,6 +130,25 @@ main {
 #graph {
     background-color: #363032;
     border-bottom: 3px solid #52484b;
+    margin-bottom: 1em;
+}
+
+#streak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#streak div {
+    text-align: center;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+#streak td {
+    width: 1em;
+    height: 1em;
+    background-color: white;
 }
 
 footer {
