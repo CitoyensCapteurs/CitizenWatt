@@ -1,0 +1,11 @@
+Samples CitizenWatt
+===================
+
+* fft.nb : Implementation in Mathematica
+* graph.py : Plot the graph with a Python script and compute the total energy used
+* pulse_detect.py : Attempts to detect the fridge in the samples
+* sample.py : various tests
+
+## Samples
+
+* sample : 2 days sample of power consumption (5s sampling)
