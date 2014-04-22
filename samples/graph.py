@@ -16,7 +16,7 @@ with open('sample.log', 'r') as fh:
 
 t = np.arange(0, len(lines)*5, 5)
 
-total = trapz(signal) / 1000 / 3600
+total = trapz(signal) / 1000 / 3600 * 5 # 5 is timestep
 
 fig = plt.figure()
 fig.suptitle('Puissance totale : '+str(round(total, 3)) +' kWh', y=0.03, x=0.55,
