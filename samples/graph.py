@@ -8,11 +8,23 @@ from scipy.integrate import trapz
 # Load data
 with open('sample', 'r') as fh:
     lines = fh.readlines() 
+    for i in range(len(lines)):
+        if i % 120 != 0:
+            lines[i] = lines[i-1]
     signal = np.zeros(len(lines))
     i = 0
     for line in lines:
         signal[i] = line.split(' ')[0]
         i += 1
+
+
+## Filter data -> mean over 5 consecutive measures
+#filtered = np.zeros(len(lines))
+#for i in range(2, len(lines) - 2):
+#    filtered[i] = (signal[i-2] + signal[i-1] + signal[i] + signal[i+1] +
+#                   signal[i+2]) / 5
+#
+#signal[2:-2] = filtered[2:-2]
 
 t = np.arange(0, len(lines)*5, 5)
 
