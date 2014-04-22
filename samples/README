@@ -9,3 +9,4 @@ Samples CitizenWatt
 ## Samples
 
 * sample : 2 days sample of power consumption (5s sampling)
+* sample2 : 1 day sample with sensor powered by battery
