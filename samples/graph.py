@@ -3,6 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import AutoMinorLocator
+from scipy.integrate import trapz
 
 # Load data
 with open('sample.log', 'r') as fh:
@@ -15,7 +16,11 @@ with open('sample.log', 'r') as fh:
 
 t = np.arange(0, len(lines)*5, 5)
 
+total = trapz(signal) / 1000 / 3600
+
 fig = plt.figure()
+fig.suptitle('Puissance totale : '+str(round(total, 3)) +' kWh', y=0.03, x=0.55,
+             bbox=dict(facecolor='yellow', edgecolor='black'))
 ax1 = fig.add_subplot('211')
 ax1.plot(t, signal)
 ax1.set_xticks(np.arange(7200,200000,86400))
