@@ -1,0 +1,31 @@
+Bibliographie : 
+
+List of Energy monitoring tools : devices, software and home automation
+http://mapawatt.com/2009/10/07/list-of-energy-monitoring-tools/
+
+Open source monitoring
+https://sites.google.com/site/ema1powermeter/open-source-energy-monitoring
+
+For Citizenwatt people, and other energy data (envoyé par Samule Huron)
+* http://ampds.org/
+* http://ampds.org/makonin2013ampds.pdf
+
+* http://boxlab.wikispaces.com/List+of+Home+Datasets
+* https://code.google.com/p/jmotif/wiki/ElectricalDevices
+* http://www.cse.org.uk/resources/open-data/domestic-energy-consumption-data
+* http://michaelbluejay.com/electricity/howmuch.html
+* http://ailab.eecs.wsu.edu/casas/datasets.html
+* https://bigml.com/gallery/datasets/index/energy_oil_and_gas?order_by=newest
+* 
+Visu
+* http://www.r-project.org/
+* http://blog.smartbear.com/apis/tools-to-help-you-write-apps-that-use-sensors/
+* http://www.bigdata-startups.com/open-source-tools/graph/
+* http://graphviz.org/
+* http://www.elisa-dbi.co.uk/blog/38-tools-for-beautiful-data-visualisations/
+* https://plot.ly
+* http://gephi.org/features/
+* 
+* Le datastore de Peter Hanappe
+* https://github.com/hanappe/opensensordata.net
+* 
