@@ -272,18 +272,19 @@ footer p {
 #graph_values {
     height: 100%;
     float: right;
+    /*overflow: hidden;*/
 }
 
 #graph_values .rect {
     float: left;
     margin-left: 2px;
     height: 100%;
-    animation-duration: 1s;
+    animation-duration: 0.1s;
     animation-name: slidein;
 }
 
 #graph_values .rect .color {
-    animation-duration: 1s;
+    animation-duration: 0.1s;
     animation-name: slidein;
 }
 
