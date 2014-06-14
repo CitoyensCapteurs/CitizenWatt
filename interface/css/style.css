@@ -1,3 +1,73 @@
+
+/******************************************************************************
+ * 0. Font faces
+ */
+
+/*
+ * 0.1 Open Sans
+ */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src:
+        local('Open Sans'),
+        local('OpenSans'),
+        url('../font/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src:
+        local('Open Sans Light'),
+        local('OpenSans-Light'),
+        url('../font/OpenSans-Light.ttf');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src:
+        local('Open Sans Semibold'),
+        local('OpenSans-Semibold'),
+        url('../font/OpenSans-Bold.ttf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src:
+        local('Open Sans Italic'),
+        local('OpenSans-Italic'),
+        url('../font/OpenSans-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src:
+        local('Open Sans Bold Italic'),
+        local('OpenSans-BoldItalic'),
+        url('../font/OpenSans-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*
+ * 0.2 Alex Brush
+ */
+
+@font-face {
+    font-family: 'Alex Brush';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Alex Brush'), local('AlexBrush'), url('../font/AlexBrush-Regular.ttf');
+}
+
+
+/******************************************************************************
+ * 1. Styles de base
+ */
+
 html, body {
     padding: 0;
     margin: 0;
@@ -6,8 +76,30 @@ html, body {
 
 body {
     background-color: #231f20;
-    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #d6d6d6;
+    font-family: "Open Sans", sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: #e3834f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 75%;
+    margin: auto;
+    padding-bottom: 4em;
+    color: #b3abab; 
+}
+
+
+/******************************************************************************
+ * 2. Classes
+ */
 
 .yellow {
     color: #ffd35d;
@@ -66,86 +158,84 @@ body {
     background-color: #ffd35d !important;
 }
 
-a:link, a:visited, a:active {
-    text-decoration: none;
-}
 
-a:hover {
-    text-decoration: underline;
-}
-
-#page {
-    position: relative;
-    min-height: 100%;
-}
+/******************************************************************************
+ * 3. Header
+ */
 
 header {
-    background-color: #363032;
-    color: #ffd35d;
-    padding: 0.5em;
-    border-bottom: 3px solid #52484b;
+    background-color: #5f5557;
+    border-bottom: 5px solid #928688;
 }
 
-header a:link, header a:visited, header a:hover, header a:active {
-    color: #d6d6d6; 
-    text-decoration: none;
-}
-
-header h1 {
-    font-family: "Nimbus Sans L";
-    font-size: 1.8em;
-    margin: 0;
-    font-weight: normal;
-    display: inline-block;
-}
-
-header h1 img {
-    max-height: 1.2em;
-    margin: 0 0.2em;
+header img {
+    margin: 2px 0;
+    margin-left: 3em;
     vertical-align: top;
 }
 
+/*
+ * 3.1. Menu
+ */
+
 #menu {
     float: right;
-    color: #d6d6d6; 
     font-size: 1.2em;
-}
-
-#menu a {
-    display: inline-block;
-}
-
-#menu a:hover {
-    color: white;
-    text-decoration: underline;
 }
 
 #menu ul {
     margin: 0;
-    line-height: 2em;
     margin-right: 0.5em;
+    margin-top: 10px;
     padding: 0;
-    list-style-type: none;
+    list-style: none outside none;
 }
 
 #menu li {
 	float: left;
-    display: inline;
+    margin: 0.5em;
+}
+
+#menu a {
+    display: inline-block;
+    color: inherit;
+}
+
+#menu a:hover {
+    color: #e3834f;
+    text-decoration: none;
+}
+
+
+/******************************************************************************
+ * 4. Footer
+ */
+
+
+footer {
     padding: 0;
-    padding: 0 8px;
-    margin: 0;
+
+    background-color: #5f5557;
+    border-top: 5px solid #928688;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    text-align: right;
+    font-size: 0.7em;
 }
 
-#menu li:not(:last-child) {
-    border-right: 1px solid rgba(0,0,0,0.6);
+footer p {
+    margin: 0.2em;
 }
 
-main {
-    width: 75%;
-    margin: auto;
-    padding-bottom: 4em;
-    color: #b3abab; 
-}
+
+
+/******************************************************************************
+ * 5. Overview
+ */
 
 #overview {
     display: flex;
@@ -160,10 +250,16 @@ main {
     text-align: center;
 }
 
-#now p:first-child, #today p:first-child, #week p:first-child {
+#now, #today, #week  {
     font-size: 3em;
     margin-bottom: 0;
 }
+
+
+/******************************************************************************
+ * 6. Graphe
+ */
+
 
 #graph {
     background-color: #363032;
@@ -185,39 +281,23 @@ main {
     background-color: rgba(255,255,255,0.1);
 }
 
-#streak {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+#graph {
+    height: 300px;
 }
 
-#streak div {
-    text-align: center;
-    margin-right: 2em;
-    margin-left: 2em;
+
+
+
+/******************************************************************************
+ * X. Autre
+ */
+
+#page {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
 }
 
-#streak td {
-    width: 1em;
-    height: 1em;
-    background-color: white;
-}
 
-footer {
-    background-color: #363032;
-    color: #d6d6d6; 
-    width: 100%;
-    text-align: right;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-top: 3px solid #52484b;
-}
 
-footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: #ffd35d;
-}
-
-footer p {
-    margin-right: 1em;
-}

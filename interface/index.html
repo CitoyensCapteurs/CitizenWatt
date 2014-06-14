@@ -4,17 +4,13 @@
         <meta charset="utf-8">
         <title>CitizenWatt</title>
         <link rel="stylesheet" href="css/style.css">
-        <style type="text/css">
-            #graph {
-                height: 200px;
-            }
-        </style>
+        <link rel="stylesheet" href="css/normalize.css">
     </head>
 
     <body>
         <div id="page">
             <header>
-                <h1><a href="index.html">CITIZEN<img src="img/logo_gradient.svg" alt="Logo CitizenWatt"/>WATT</a></h1>
+                <a href="index.html"><img src="img/logo.png" alt="Logo CitizenWatt"/></a>
 
                 <div id="menu">
                     <ul>
@@ -28,19 +24,17 @@
             </header>
             
             <main>
-                <div id="heartbeat">
-                </div>
                 <div id="overview">
-                    <div id="now">
-                        <p class="blurry red">420W</p>
+                    <div>
+                        <p id="now" class="blurry red">420W</p>
                         <p>Consommation actuelle</p>
                     </div>
-                    <div id="today">
-                        <p class="blurry orange">122W</p>
+                    <div>
+                        <p id="today" class="blurry orange">122W</p>
                         <p>Moyenne aujourd'hui</p>
                     </div>
-                    <div id="week">
-                        <p class="blurry yellow">80W</p>
+                    <div>
+                        <p id="week" class="blurry yellow">80W</p>
                         <p>Moyenne cette semaine</p>
                     </div>
                 </div>
@@ -49,179 +43,9 @@
                     <hr style="position:absolute; bottom:33.3%; width:100%"/>
                     <hr style="position:absolute; bottom:66.7%; width:100%"/>
                 </div>
-
-                <div id="streak">
-                    <div>
-                        <h2>Janvier</h2>
-                        <table>
-                            <tr>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="yellow-day"></td>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="yellow-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="yellow-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="red-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="yellow-day"></td>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="yellow-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="red-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="yellow-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div>
-                        <h2>Février</h2>
-                        <table>
-                            <tr>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="red-day"></td>
-                                <td class="yellow-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="yellow-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="red-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="yellow-day"></td>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="yellow-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="yellow-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="red-day"></td>
-                            </tr>
-
-
-                            <tr>
-                                <td class="yellow-day"></td>
-                                <td class="orange-day"></td>
-                                <td class="red-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div>
-                        <h2>Mars</h2>
-                        <table>
-                            <tr>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="no-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                            </tr>
-
-
-                            <tr>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="empty-day"></td>
-                                <td class="no-day"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
             </main>
-            
+
             <footer>
-                <p class="left"><a href="">Mode avancé</a></p>
                 <p>Licence SODAWARE | <a href="http://citoyenscapteurs.net/">Citoyens Capteurs</a></p>
             </footer>
         </div>
