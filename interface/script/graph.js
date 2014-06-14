@@ -1,6 +1,7 @@
 
 var URL = 'test.json'
   , MAX_POWER = 2500
+  , UPDATE_TIMEOUT = 2000 // En millisecondes
   ;
 
 (function(){
@@ -48,7 +49,7 @@ var URL = 'test.json'
 	        }
 	    }
 
-		setTimeout(update, 10000);
+		setTimeout(update, UPDATE_TIMEOUT);
 	}
 
 	update();
