@@ -266,11 +266,18 @@ footer p {
     border-bottom: 3px solid #52484b;
     margin-bottom: 1em;
     position: relative;
+    height: 300px;
 }
 
-#graph .rect {
-    position: absolute;
-    bottom: 0;
+#graph_values {
+    height: 100%;
+    float: right;
+}
+
+#graph_values .rect {
+    float: left;
+    margin-left: 2px;
+    height: 100%;
 }
 
 #graph hr {
@@ -280,12 +287,6 @@ footer p {
     height: 2px;
     background-color: rgba(255,255,255,0.1);
 }
-
-
-#graph {
-    height: 300px;
-}
-
 
 
 
