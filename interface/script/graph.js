@@ -30,10 +30,6 @@ var URL = 'test.json'
 		blank.style.width = size + 'px';
 		blank.style.height = (100 - height) + '%';
 	}
-	
-	for (var i = 0 ; i < 10 ; i++) {
-		addRect(40 * (Math.sin(i/1.) + 1.1));
-	}
 
 	var req = new XMLHttpRequest();
 	function update() {
