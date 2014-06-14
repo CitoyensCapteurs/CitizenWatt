@@ -250,7 +250,7 @@ footer p {
     text-align: center;
 }
 
-#now, #today, #week  {
+#now, #day, #week  {
     font-size: 3em;
     margin-bottom: 0;
 }
@@ -278,6 +278,11 @@ footer p {
     float: left;
     margin-left: 2px;
     height: 100%;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+#graph_values .rect .color {
     animation-duration: 1s;
     animation-name: slidein;
 }

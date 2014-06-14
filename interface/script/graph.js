@@ -7,11 +7,17 @@ var URL = 'test.json'
 (function(){
 	
 	var graph = document.getElementById('graph_values')
+	  , now = document.getElementById('now')
+	  , day = document.getElementById('day')
+	  , sum = 0
+	  , n_values = 0
+	  , mean
 	  , size = 12 // @keyframes slidein
 	  , border = 2 // #graph_values .rect
 	  ;
 	
-	function addRect(height) {
+	function addRect(power) {
+		var height = power / MAX_POWER * 100;
 		var div = document.createElement('div');
 		var blank = document.createElement('div');
 		var color = document.createElement('div');
@@ -22,13 +28,26 @@ var URL = 'test.json'
 		div.className = 'rect';
 		div.style.width = size + 'px';
 
-		color.className = 'color ' + (height > 33.3 ? (height >= 66.7 ? 'red-day' : 'orange-day') : 'yellow-day');
+		var color_class = (height > 33.3 ? (height >= 66.7 ? 'red' : 'orange') : 'yellow');
+		color.className = 'color ' + color_class + '-day';
 		color.style.width = size + 'px';
 		color.style.height = height + '%';
 
 		blank.className = 'blank';
 		blank.style.width = size + 'px';
 		blank.style.height = (100 - height) + '%';
+
+		now.className = 'blurry ' + color_class;
+		now.innerHTML = power + 'W';
+
+		++n_values;
+		sum += power;
+		mean = sum / n_values;
+		var height = mean / MAX_POWER * 100;
+		var color_class = (height > 33.3 ? (height >= 66.7 ? 'red' : 'orange') : 'yellow');
+		day.className = 'blurry ' + color_class;
+		day.innerHTML = Math.floor(mean) + 'W';
+
 	}
 
 	var req = new XMLHttpRequest();
@@ -39,7 +58,7 @@ var URL = 'test.json'
 	        if (req.readyState == 4) {
 	            var data = JSON.parse(req.responseText);
 	            for(var i = 0 ; i < data.length ; ++i) {
-	            	addRect(data[i].power / MAX_POWER * 100);
+	            	addRect(data[i].power);
 	            }
 	        }
 	    }
