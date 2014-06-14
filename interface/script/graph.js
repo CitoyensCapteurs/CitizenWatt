@@ -2,8 +2,8 @@
 (function(){
 	
 	var graph = document.getElementById('graph_values')
-	  , size = 12
-	  , border = 2
+	  , size = 12 // @keyframes slidein
+	  , border = 2 // #graph_values .rect
 	  ;
 	
 	function addRect(nth, height) {
@@ -29,6 +29,22 @@
 	for (var i = 0 ; i < 50 ; i++) {
 		addRect(i, 40 * (Math.sin(i/1.) + 1.1));
 	}
+
+	var req = new XMLHttpRequest();
+	function update() {
+		req.open('GET', '[URL]', true);
+		req.onreadystatechange = function() {
+	        if (req.readyState == 4) {
+	            var data = JSON.parse(req.responseText);
+	            for(var i = 0 ; i < data.length ; ++i) {
+	            	addRect(data[i].power)
+	            }
+	        }
+	    }
+
+		setTimeout(update, 1000);
+	}
+
 	
 })();
 
