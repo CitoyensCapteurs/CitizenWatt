@@ -37,10 +37,9 @@ var URL = 'test.json'
 		req.send();
 		req.onreadystatechange = function() {
 	        if (req.readyState == 4) {
-	        	console.log(req.responseText);
 	            var data = JSON.parse(req.responseText);
 	            for(var i = 0 ; i < data.length ; ++i) {
-	            	addRect(data[i].power / MAX_POWER);
+	            	addRect(data[i].power / MAX_POWER * 100);
 	            }
 	        }
 	    }
