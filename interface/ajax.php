@@ -1,4 +1,9 @@
 <?php
+$mysql_host = "localhost";
+$mysql_db = "citizenwatt";
+$mysql_user = "";
+$mysql_pass = "";
+
 if(is_file('last')) {
     $last_id = file_get_contents('last');
 }
@@ -6,12 +11,15 @@ else {
     $last_id = -1;
 }
 
-$dbh = new PDO('mysql:host=localhost;dbname=citizenwatt', 'root', 'toto');
+$dbh = new PDO('mysql:host='.$mysql_host.';dbname='.$mysql_db, $mysql_user, $mysql_pass);
 
-$data = array()
+$data = array();
 
-foreach($dbh->query('SELECT * from values WHERE id > '.$last_id.' ORDER BY id DESC') as $row) {
+foreach($dbh->query('SELECT id, date, power FROM measures WHERE id > '.$last_id.' ORDER BY id DESC') as $row) {
+    if(empty($data)) { $last_id = $row['id']; }
     $data[] = array('power' => $row['power']);
 }
+
+file_put_contents('last', $last_id);
 
 exit(json_encode($data));

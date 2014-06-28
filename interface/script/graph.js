@@ -1,11 +1,11 @@
 
-var URL = 'test.json'
-  , MAX_POWER = 2500
+var URL = 'ajax.php'
+  , MAX_POWER = 3500
   , UPDATE_TIMEOUT = 2000 // En millisecondes
   ;
 
 (function(){
-	
+
 	var graph = document.getElementById('graph')
 	  , graph_values = document.getElementById('graph_values')
 	  , now = document.getElementById('now')
@@ -16,9 +16,9 @@ var URL = 'test.json'
 	  , size = 12 // @keyframes slidein
 	  , border = 2 // #graph_values .rect
 	  ;
-	
+
 	function addRect(power) {
-		var height = power / MAX_POWER * 100;
+		var height = parseInt(power) / MAX_POWER * 100;
 		var div = document.createElement('div');
 		var blank = document.createElement('div');
 		var color = document.createElement('div');
@@ -42,7 +42,7 @@ var URL = 'test.json'
 		now.innerHTML = Math.floor(power) + 'W';
 
 		++n_values;
-		sum += power;
+		sum += parseInt(power);
 		mean = sum / n_values;
 		height = mean / MAX_POWER * 100;
 		color_class = (height > 33.3 ? (height >= 66.7 ? 'red' : 'orange') : 'yellow');
@@ -75,7 +75,7 @@ var URL = 'test.json'
 
 	update();
 
-	
+
 })();
 
 
