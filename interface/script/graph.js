@@ -3,6 +3,7 @@ var URL = 'ajax.php'
   , MAX_POWER = 3500
   , UPDATE_TIMEOUT = 2000 // En millisecondes
   ;
+var start_time= Math.round((new Date().getTime()) / 1000);
 
 (function(){
 
@@ -16,6 +17,10 @@ var URL = 'ajax.php'
 	  , size = 12 // @keyframes slidein
 	  , border = 2 // #graph_values .rect
 	  ;
+
+    function W_to_euros(power, start_time, end_time) {
+        return Math.round(100*(0.2317 + (0.1367 * power/1000 * (end_time - start_time) / 3600)))/100;
+    }
 
 	function addRect(power) {
 		var height = parseInt(power) / MAX_POWER * 100;
@@ -47,7 +52,8 @@ var URL = 'ajax.php'
 		height = mean / MAX_POWER * 100;
 		color_class = (height > 33.3 ? (height >= 66.7 ? 'red' : 'orange') : 'yellow');
 		day.className = 'blurry ' + color_class;
-		day.innerHTML = Math.floor(mean) + 'W';
+        var timestamp = Math.round((new Date().getTime()) / 1000);
+		day.innerHTML = Math.floor(mean) + 'W (' + W_to_euros(mean, start_time, timestamp)+'€)';
 
 		var max_values = Math.floor(graph.clientWidth / (size + border));
 		if (n_values >= max_values) {
@@ -65,10 +71,10 @@ var URL = 'ajax.php'
 	            var data = JSON.parse(req.responseText);
 	            for(var i = 0 ; i < data.length ; ++i) {
 	            	addRect(data[i].power);
-	            	//addRect(Math.random() * MAX_POWER);
 	            }
 	        }
 	    }
+        // Debug : addRect(Math.random() * MAX_POWER);
 
 		setTimeout(update, UPDATE_TIMEOUT);
 	}
