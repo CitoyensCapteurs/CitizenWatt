@@ -18,8 +18,8 @@ var start_time= Math.round((new Date().getTime()) / 1000);
 	  , border = 2 // #graph_values .rect
 	  ;
 
-    function W_to_euros(power, start_time, end_time) {
-        return Math.round(100*(0.2317 + (0.1367 * power/1000 * (end_time - start_time) / 3600)))/100;
+    function kWh_to_euros(energy) {
+        return Math.round(100*(0.2317 + (0.1367 * energy)))/100;
     }
 
 	function addRect(power) {
@@ -48,12 +48,12 @@ var start_time= Math.round((new Date().getTime()) / 1000);
 
 		++n_values;
 		sum += parseInt(power);
-		mean = sum / n_values;
-		height = mean / MAX_POWER * 100;
+		total = sum * UPDATE_TIMEOUT / 3600 / 1000000;
+		height = total / MAX_POWER * 100;
 		color_class = (height > 33.3 ? (height >= 66.7 ? 'red' : 'orange') : 'yellow');
 		day.className = 'blurry ' + color_class;
         var timestamp = Math.round((new Date().getTime()) / 1000);
-		day.innerHTML = Math.floor(mean) + 'W (' + W_to_euros(mean, start_time, timestamp)+'€)';
+		day.innerHTML = Math.round(total * 1000)/1000 + 'kWh (' + kWh_to_euros(total)+'€)';
 
 		var max_values = Math.floor(graph.clientWidth / (size + border));
 		if (n_values >= max_values) {
@@ -74,7 +74,7 @@ var start_time= Math.round((new Date().getTime()) / 1000);
 	            }
 	        }
 	    }
-        // Debug : addRect(Math.random() * MAX_POWER);
+        addRect(Math.random() * MAX_POWER);
 
 		setTimeout(update, UPDATE_TIMEOUT);
 	}
