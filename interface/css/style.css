@@ -93,7 +93,7 @@ main {
     width: 75%;
     margin: auto;
     padding-bottom: 4em;
-    color: #b3abab; 
+    color: #b3abab;
 }
 
 
@@ -222,7 +222,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    
+
     text-align: right;
     font-size: 0.7em;
 }
@@ -302,7 +302,7 @@ footer p {
     }
 
     to {
-        width: 12px; 
+        width: 12px;
     }
 }
 
@@ -319,4 +319,8 @@ footer p {
 }
 
 
-
+@media screen and (max-width: 780px) {
+    #menu {
+        display: none;
+    }
+}
