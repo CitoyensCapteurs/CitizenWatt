@@ -10,12 +10,14 @@ if(is_file('last')) {
 else {
     $last_id = -1;
 }
+$last_id = (int) $last_id;
 
 $dbh = new PDO('mysql:host='.$mysql_host.';dbname='.$mysql_db, $mysql_user, $mysql_pass);
 
 $data = array();
 
-foreach($dbh->query('SELECT id, date, power FROM measures WHERE id > '.$last_id.' ORDER BY id DESC') as $row) {
+$query = $dbh->query('SELECT id, time, power FROM measures WHERE id > '.$last_id.' ORDER BY id DESC');
+foreach($query->fetchAll() as $row) {
     if(empty($data)) { $last_id = $row['id']; }
     $data[] = array('power' => $row['power']);
 }

@@ -90,7 +90,8 @@ var start_time= Math.round((new Date().getTime()) / 1000);
 	            }
 	        }
 	    }
-        addRect(Math.random() * MAX_POWER);
+	// Uncomment for debugging
+        // addRect(Math.random() * MAX_POWER);
 
 		setTimeout(update, UPDATE_TIMEOUT);
 	}
